@@ -1,20 +1,18 @@
 import React from 'react';
 
 class thumbnails extends React.Component {
-	constructor(props) {
+	constructor (props) {
 		super(props);
 	}
-	render() {
+	render () {
 		return (
 			<div className="Thumbnails">
-				{
-					this.props.thumnaildata.map((imgsrc) => {
-						return (<img src={imgsrc} />)
-					})
-				}
+				{this.props.thumbnaildata.map((imgsrc) => {
+					return <img src={imgsrc} />;
+				})}
 			</div>
 		);
 	}
-};
+}
 
 export default thumbnails;
