@@ -29,7 +29,7 @@ module.exports = merge(common, {
 			})
 		]
 	},
-	plugins: [new MiniCssExtractPlugin({ filename: '[name].[contentHash].css' }), new CleanWebpackPlugin()],
+	plugins: [ new MiniCssExtractPlugin({ filename: '[name].[contentHash].css' }), new CleanWebpackPlugin() ],
 	module: {
 		rules: [
 			{
@@ -38,14 +38,14 @@ module.exports = merge(common, {
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['@babel/preset-react', '@babel/preset-env'],
-						plugins: ["@babel/plugin-proposal-class-properties", "transform-export-extensions"]
+						presets: [ '@babel/preset-react', '@babel/preset-env' ],
+						plugins: [ '@babel/plugin-proposal-class-properties', 'transform-export-extensions' ]
 					}
 				}
 			},
 			{
-				test: /\.scss$/,
-				use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+				test: /\.css$/,
+				loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
 			}
 		]
 	}
