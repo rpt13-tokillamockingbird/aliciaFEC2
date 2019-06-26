@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from '../styles/ThumbnailList.css';
 
 class thumbnails extends React.Component {
 	constructor (props) {
@@ -6,9 +7,9 @@ class thumbnails extends React.Component {
 	}
 	render () {
 		return (
-			<div className="Thumbnails">
+			<div className={classes.ThumbnailList}>
 				{this.props.thumbnaildata.map((imgsrc) => {
-					return <img src={imgsrc} />;
+					return <img className={classes.thumbnail} src={imgsrc} />;
 				})}
 			</div>
 		);

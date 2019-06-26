@@ -1,6 +1,7 @@
 import React from 'react';
 import MainImg from './MainImg.jsx';
 import Thumbnails from './ThumbnailList.jsx';
+import classes from '../styles/App.css';
 import imageList from '../../../database/index.json';
 
 class App extends React.Component {
@@ -23,9 +24,9 @@ class App extends React.Component {
 
 	render () {
 		return (
-			<div className="App">
-				<MainImg data={this.state.imageData} />
+			<div className={classes.App}>
 				<Thumbnails thumbnaildata={this.state.imageThumbNails} />
+				<MainImg data={this.state.imageData} />
 			</div>
 		);
 	}

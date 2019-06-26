@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from '../styles/MainImg.css';
 
 class mainImg extends React.Component {
 	constructor (props) {
@@ -6,7 +7,7 @@ class mainImg extends React.Component {
 	}
 	render () {
 		return (
-			<div className="MainImg">
+			<div className={classes.MainImg}>
 				<img src={this.props.data} />
 			</div>
 		);
