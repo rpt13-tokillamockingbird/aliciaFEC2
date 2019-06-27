@@ -6,6 +6,7 @@
 	"directories": {
 		"test": "test"
 	},
+
 	"scripts": {
 		"start": "webpack-dev-server --config webpack.dev.js --open",
 		"build": "webpack --config webpack.prod.js",
@@ -14,9 +15,7 @@
 	},
 	"jest": {
 		"verbose": true,
-		"setupFilesAfterEnv": [
-			"./test/enzyme.setup.js"
-		]
+		"setupFilesAfterEnv": [ "./test/enzyme.setup.js" ]
 	},
 	"author": "aeasterwood",
 	"license": "ISC",

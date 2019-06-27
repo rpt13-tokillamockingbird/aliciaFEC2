@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyparser = require('body-parser');
-const faker = require('faker');
-const port = 3001;
+const port = process.env.HTTP_PORT || 3001;
 
 const app = express();
 
