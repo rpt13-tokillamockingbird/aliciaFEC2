@@ -10,7 +10,8 @@
 		"start": "webpack-dev-server --config webpack.dev.js --open",
 		"build": "webpack --config webpack.prod.js",
 		"test": "jest ./test",
-		"server": "nodemon ./server/index.js"
+		"server": "nodemon ./server/index.js",
+		"serverec2": "node ./server/index.js"
 	},
 	"jest": {
 		"verbose": true,
