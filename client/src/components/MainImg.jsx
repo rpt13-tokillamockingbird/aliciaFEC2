@@ -1,18 +1,17 @@
 import React from 'react';
-//import colehaan1 from '../assets/colehaan1.jpg';
+import classes from '../styles/MainImg.css';
 
 class mainImg extends React.Component {
-	constructor(props) {
+	constructor (props) {
 		super(props);
 	}
-	render() {
+	render () {
 		return (
-			<div className="MainImg">
+			<div className={classes.MainImg}>
 				<img src={this.props.data} />
 			</div>
 		);
 	}
-
-};
+}
 
 export default mainImg;

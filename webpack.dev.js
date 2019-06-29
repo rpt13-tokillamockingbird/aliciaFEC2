@@ -24,14 +24,26 @@ module.exports = merge(common, {
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['@babel/preset-react', '@babel/preset-env'],
-						plugins: ["@babel/plugin-proposal-class-properties", "transform-export-extensions"]
+						presets: [ '@babel/preset-react', '@babel/preset-env' ],
+						plugins: [ '@babel/plugin-proposal-class-properties', 'transform-export-extensions' ]
 					}
 				}
 			},
 			{
-				test: /\.scss$/,
-				use: ['style-loader', 'css-loader', 'sass-loader']
+				test: /\.css$/,
+				use: [
+					{
+						loader: 'style-loader'
+					},
+					{
+						loader: 'css-loader',
+						options: {
+							modules: {
+								localIdentName: '[name]_[local]_[hash:base64]'
+							}
+						}
+					}
+				]
 			}
 		]
 	}

@@ -6,8 +6,7 @@ const SRC_DIR = path.join(__dirname, '/client/src');
 
 module.exports = merge(common, {
 	entry: {
-		main: `${SRC_DIR}/index.jsx`,
-		vendor: `${SRC_DIR}/vendor.js`
+		main: `${SRC_DIR}/index.jsx`
 	},
 	module: {
 		rules: [
