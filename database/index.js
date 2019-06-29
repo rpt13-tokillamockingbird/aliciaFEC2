@@ -7,7 +7,7 @@ const config = require('../config.json');
 		aws.config.update({
 			accessKeyId: config.accessKeyId,
 			secretAccessKey: config.secretAccessKey,
-			region: 'us-east-1'
+			region: 'us-east-2'
 		});
 
 		const s3 = new aws.S3();

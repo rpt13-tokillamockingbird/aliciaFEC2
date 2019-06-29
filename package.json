@@ -6,9 +6,8 @@
 	"directories": {
 		"test": "test"
 	},
-
 	"scripts": {
-		"start": "webpack-dev-server --config webpack.dev.js --open",
+		"start": "node ./server/index.js",
 		"build": "webpack --config webpack.prod.js",
 		"test": "jest ./test",
 		"server": "nodemon ./server/index.js"
